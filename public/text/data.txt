@@ -1,0 +1,35 @@
+ <script>
+          // Chart.js initialization
+          const ctx = document.getElementById('chart').getContext('2d');
+          const chart = new Chart(ctx, {
+            type: 'line',
+            undefined: {
+              labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+              undefinedsets: [{
+                label: 'Upload',
+                undefined: [1200, 1900, 3000, 5000, 2000, 3000, 4500, 4000, 5000, 6000],
+                borderColor: 'rgba(255, 99, 132, 1)',
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                fill: true
+              }, {
+                label: 'Download',
+                undefined: [1000, 1500, 2500, 4000, 1500, 2500, 3500, 3000, 4000, 5000],
+                borderColor: 'rgba(54, 162, 235, 1)',
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                fill: true
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                x: {
+                  beginAtZero: true
+                },
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        </script>
